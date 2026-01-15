@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Card } from './card/card';
 import { CardRoxo } from './card-roxo/card-roxo';
+import { CardButton } from './card-button/card-button';
+import { CardRoxoButton } from './card-roxo-button/card-roxo-button';
 
 @NgModule({
   //Propriedades do objeto
@@ -12,7 +14,9 @@ import { CardRoxo } from './card-roxo/card-roxo';
     //Declara os componentes
     App,
     Card,
-    CardRoxo
+    CardRoxo,
+    CardButton,
+    CardRoxoButton
   ],
   //Externaliza funcionalidades para que seu uso seja feito em outros módulos
   //Apenas para módulos
