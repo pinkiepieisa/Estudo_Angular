@@ -3,13 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { Card } from './card/card';
 
 @NgModule({
+  //Propriedades do objeto
   declarations: [
-    App
+    //Declara os componentes
+    App,
+    Card
   ],
+  //Externaliza funcionalidades para que seu uso seja feito em outros módulos
   imports: [
-    BrowserModule,
+    BrowserModule, 
     AppRoutingModule
   ],
   providers: [
