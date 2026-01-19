@@ -14,11 +14,15 @@ export class Card {
     preco: 100,
     info: {
       tipos: 'Simples mesmo',
-      precos: 2400
+      precos: 2400,
     } //Objeto do objeto
+
   };
 
-  /* null = undefined */
+  /*plano = {
+    //@ts-ignore
+    valores
+  }*/
   
   /* Usando uma função
   
@@ -33,4 +37,14 @@ export class Card {
 
     return 'R$' + this.preco + ',00/Mês'
   }*/
+
+    /* null = undefined = vazio */
+
+    /* undefined?.tipo
+    encadeamento opcional
+    valida se o objeto é undefined 
+    optional chanining*/
+
+    /* //@ts-ignore 
+    faz o ts ignorar tipagem e afins da propriedade  */
 }

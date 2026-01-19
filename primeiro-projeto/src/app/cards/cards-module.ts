@@ -4,6 +4,7 @@ import { Card } from '../card/card';
 import { CardButton } from '../card-button/card-button';
 import { CardRoxoButton } from '../card-roxo-button/card-roxo-button';
 import { CardRoxo } from '../card-roxo/card-roxo';
+import { CardButtonCancel } from '../card-button-cancel/card-button-cancel';
 
 
 
@@ -12,7 +13,9 @@ import { CardRoxo } from '../card-roxo/card-roxo';
     Card,
     CardRoxo,
     CardButton,
-    CardRoxoButton
+    CardRoxoButton,
+    CardButtonCancel
+
   ],
   imports: [
     CommonModule,
@@ -20,7 +23,7 @@ import { CardRoxo } from '../card-roxo/card-roxo';
   //Exportação dos componentes para que eles possam ser usados em outro módulo
   exports: [
     Card,
-    CardRoxo,  
+    CardRoxo 
   ]
 })
 export class CardsModule { }

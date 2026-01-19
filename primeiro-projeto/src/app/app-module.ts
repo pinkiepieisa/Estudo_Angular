@@ -10,14 +10,15 @@ import { CardsModule } from './cards/cards-module';
   //Propriedades do objeto
   declarations: [
     //Declara os componentes
-    App
+    App  
+  
   ],
   //Apenas para módulos
   //Módulos que possuem componentes que estão sendo utilizados
   imports: [
     BrowserModule, 
     AppRoutingModule,
-    CardsModule
+    CardsModule,
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
