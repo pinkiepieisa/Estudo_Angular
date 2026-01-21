@@ -21,3 +21,8 @@
     }
 
 }
+
+::ng-deep app-card-button-cancel .card-cancel-button {
+    background-color: rgb(228, 166, 255) !important;
+}
+//Alteração de componente filho no componente pai
