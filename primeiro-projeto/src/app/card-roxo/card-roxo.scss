@@ -20,3 +20,9 @@
         font-size: 40px;
     }
 }
+
+:host ::ng-deep .card-cancel-button {
+    background-color: #df96fc !important;
+}
+
+//Encapsulamente unicamente para o componente
