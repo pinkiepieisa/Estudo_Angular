@@ -26,3 +26,9 @@
 :host ::ng-deep .button-cancel {
     font-family:Georgia, 'Times New Roman', Times, serif !important;
 }
+
+:host ::ng-deep.mdc-slider__track--active_fill {
+  border-color:yellowgreen !important;
+}
+
+//ng deep porque ele é um componente filho
