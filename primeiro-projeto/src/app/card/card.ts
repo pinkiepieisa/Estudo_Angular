@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-card',
   standalone: false,
   templateUrl: './card.html',
   styleUrl: './card.scss',
+  encapsulation: ViewEncapsulation.None, //Torta a estilização desse componente global
+  //Não é muito usual
 })
 export class Card {
 
