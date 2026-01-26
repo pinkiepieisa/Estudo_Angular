@@ -30,9 +30,24 @@
 :host ::ng-deep.mdc-slider__track--active_fill {
   border-color:yellowgreen !important;
 }
+//Cuidado com os espaços
+/*Sem espaço
+mat-slider .custom-slider
+Elemento custom dentro do elemento mat-slider
+
+Sem espaço
+mat-slider.custom-slider
+elemento sendo aplicado diretamente 
+classe está no elemento citado primeiro*/
 
 //ng deep porque ele é um componente filho
 
 .global {
     background-color: deeppink;
 }
+
+div[teste] {
+    background-color: pink;
+}
+//[Atributo] -> serve apenas para Emulated
+//Melhor fazer uso de id ou class

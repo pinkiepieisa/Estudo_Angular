@@ -5,7 +5,10 @@ import { Component, ViewEncapsulation } from '@angular/core';
   standalone: false,
   templateUrl: './card.html',
   styleUrl: './card.scss',
-  encapsulation: ViewEncapsulation.None, //Torta a estilização desse componente global
+  encapsulation: ViewEncapsulation.Emulated, 
+  //ShadowDom -> Nada afeta o componente e ele não afeta nenhum outro (Apenas os filhos)
+  //Emulated é o padrão, não afeta outros componentes, mas é afetado pelos globais desde que tenha !important
+  //.None Torna a estilização desse componente global
   //Não é muito usual
 })
 export class Card {

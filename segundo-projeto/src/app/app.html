@@ -1,0 +1,19 @@
+<input id="meu-input" [value]="inputText" [type]="inputType" [disabled]="isDisabled" />
+
+<!-- [] transforma em propriedade -->
+
+<br><br>
+
+<button (click)="enableInput()"> Habilitar </button>
+<button (click)="disabledInput()"> Desabilitar </button>
+
+<br><br>
+
+<p>Tipo de texto:</p>
+
+<button (click)="textType()">Texto</button>
+<button (click)="passwordType()">Password</button>
+
+<br><br>
+
+<button (click)="logInputText()">Log</button>
