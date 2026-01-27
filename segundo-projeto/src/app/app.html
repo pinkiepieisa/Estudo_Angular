@@ -24,3 +24,14 @@
 <!-- <input (keyup)="handleInputKeyup($event)"> -->
 
 <input (input)="handleInputEvent($event)">
+
+<!-- Attribute Binding -->
+
+<br><br>
+
+<button [attr.title]="buttonTitle"> Teste </button>
+
+<button [attr.disabled]="buttonDisabled ? true : null"> Disabled </button>
+<!-- true -> disabilita / null retorna false e habilita o botão -->
+
+<button (click)="onButtonClick()"> Mudar Props </button>

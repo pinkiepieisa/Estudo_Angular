@@ -59,6 +59,18 @@ const currentText = (event.target as HTMLInputElement).value;
 console.log(currentText);
 }
 
+// Attribute Binding 
+
+buttonTitle = 'Título dinâmico';
+
+buttonDisabled = true;
+
+onButtonClick() {
+  this.buttonTitle = 'Título ALTERADO';
+  this.buttonDisabled = !this.buttonDisabled;
+  //Vai receber o valor contrário ao presente em buttonDisabled
+}
+
 
 }
 
