@@ -1,0 +1,9 @@
+<button [class.red-button]="isRedButton" (click)="isGreen = false;">Vermelho</button>
+<button [class.green-button]="true" (click)="isGreen = true;">Verde</button>
+
+<button [class]="'red-button green-button'">Verde 2</button>
+
+<button [class]="{
+  'red-button': !isGreen,
+  'green-button': isGreen,
+}">Objeto</button>

@@ -35,3 +35,26 @@
 <!-- true -> disabilita / null retorna false e habilita o botão -->
 
 <button (click)="onButtonClick()"> Mudar Props </button>
+
+<!-- Style Binding -->
+<!-- Estilos dinâmicos -->
+<br> <br>
+
+<button style="width: 100px; background-color: deeppink;"> Botão 0</button>
+
+<button [style.width]="widthButton" [style.backgroundColor]="backgroundButton" > Botão 1</button>
+
+<button [style.width.px]="widthButton2" [style.height.px]="'40'">Botão 2</button>
+
+<button (click)="updateWidth()">Atualizar width </button>
+
+<button [style]="'width: 200px; background-color: blue;'"> Botão 3</button>
+
+<!-- Objeto -> chave-valor -->
+
+<button [style]="{width: '150px', backgroundColor: 'orange'}"> Botão 4 </button>
+<!-- ou 'background-color': '' -->
+
+<button [style]="stylesObj"> Botão 5 </button>
+
+<button (click)="updateStyleObj()"> Atualiza o botão 5</button>

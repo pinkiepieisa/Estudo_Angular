@@ -41,36 +41,58 @@ export class App {
   }
 
   // Event Binding
-// () está recebendo um valor da propriedade a direita
-// [] Está enviando um valor para a propriedade
+  // () está recebendo um valor da propriedade a direita
+  // [] Está enviando um valor para a propriedade
 
-//Não utilizar any, buscar saber o tipo do objeto
+  //Não utilizar any, buscar saber o tipo do objeto
 
-handleInputKeyup(event: KeyboardEvent){
+  handleInputKeyup(event: KeyboardEvent){
+    const currentText = (event.target as HTMLInputElement).value;
+    //Forçando uma tipagem
+    console.log(currentText);
+  }
+
+  handleInputEvent(event: Event) {
   const currentText = (event.target as HTMLInputElement).value;
-  //Forçando uma tipagem
+  //Target é a propriedade onde o elemento value está contido
+
   console.log(currentText);
-}
+  }
 
-handleInputEvent(event: Event) {
-const currentText = (event.target as HTMLInputElement).value;
-//Target é a propriedade onde o elemento value está contido
+  // Attribute Binding 
 
-console.log(currentText);
-}
+  buttonTitle = 'Título dinâmico';
 
-// Attribute Binding 
+  buttonDisabled = true;
 
-buttonTitle = 'Título dinâmico';
+  onButtonClick() {
+    this.buttonTitle = 'Título ALTERADO';
+    this.buttonDisabled = !this.buttonDisabled;
+    //Vai receber o valor contrário ao presente em buttonDisabled
+  }
 
-buttonDisabled = true;
+  // Style Binding 
+  widthButton = '110px';
 
-onButtonClick() {
-  this.buttonTitle = 'Título ALTERADO';
-  this.buttonDisabled = !this.buttonDisabled;
-  //Vai receber o valor contrário ao presente em buttonDisabled
-}
+  backgroundButton = 'purple';
 
+  widthButton2 = 130;
+
+  stylesObj = {
+    width: '130px', 
+    backgroundColor: 'green'
+  }
+
+  updateStyleObj() {
+    this.stylesObj = {
+      width: '400px', 
+      backgroundColor: 'lightblue'
+    }
+  }
+
+  updateWidth() {
+    this.widthButton2 = 300;
+  }
 
 }
 
