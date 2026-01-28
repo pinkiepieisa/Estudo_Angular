@@ -14,4 +14,8 @@ export class Card {
   @Input({ required: true, alias: 'planPrice' }) planPrice: number = 0;
   //Objeto que torna o input obrigatório
 
+  buttonClicked(valueEmitted: boolean) {
+    console.log('buttonClick', valueEmitted);
+  }
+
 }

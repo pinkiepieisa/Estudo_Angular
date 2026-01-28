@@ -2,7 +2,9 @@
 
     <div class="card__plan card__item"> Plano <b> {{ planType }} </b> </div>
     <div class="card__price card__item"> R$ {{ planPrice }},00/mês </div>
-    <app-card-button></app-card-button>
+    <app-card-button (buttonClick)="buttonClicked($event)">
+        <!-- (dentro do componente filho)="dentro do componente pai()" -->
+    </app-card-button>
     <app-card-button-cancel></app-card-button-cancel>
 
 
