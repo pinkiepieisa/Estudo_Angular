@@ -14,4 +14,8 @@ export class App {
   handlePlanType(text: string) {
     this.cardPlanType = text;
   }
+
+  handlePlanPrice(valor: number) {
+    this.cardPlanPrice = valor;
+  }
 }

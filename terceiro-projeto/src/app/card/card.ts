@@ -14,16 +14,18 @@ export class Card {
 
   @Input('planType') set planType (value: string) {
     this._planType = value.toUpperCase();
-  //Alias
-  //Set externaliza uma propriedade
+    //Alias
+    //Set externaliza uma propriedade
   }
 
   get planType():string {
     return this._planType;
   }
 
-  @Input({ required: true, alias: 'planPrice' }) planPrice: number = 0;
+  @Input({ required: true, alias: 'planPrice', transform: (value: number) => '' }) planPrice: number = 0;
   //Objeto que torna o input obrigatório
+
+
 
   buttonClicked(valueEmitted: boolean) {
     console.log('buttonClick', valueEmitted);
