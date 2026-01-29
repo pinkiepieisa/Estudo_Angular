@@ -10,4 +10,8 @@ export class App {
   protected readonly title = signal('primeiro-projeto');
   cardPlanType = 'Simples';
   cardPlanPrice = 100;
+
+  handlePlanType(text: string) {
+    this.cardPlanType = text;
+  }
 }
