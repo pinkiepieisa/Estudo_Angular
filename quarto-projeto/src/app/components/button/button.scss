@@ -1,0 +1,27 @@
+.button {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+
+    position: relative;
+
+    &:active {
+        bottom: -2px;
+        box-shadow: 3px 3px 3px 3px #8888882f;    
+    }
+
+    &--white {
+        background-color: aliceblue;
+
+    }
+
+    &--purple {
+        background-color: plum;
+    }
+}
