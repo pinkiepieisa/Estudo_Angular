@@ -1,0 +1,32 @@
+<div style="background-color: greenyellow;" *ngIf="minhaProp; else meuTemplate" >Sou uma div!</div>
+
+<ng-template #meuTemplate>
+
+  <div style="background-color: rgb(255, 47, 47);" > Sou uma outra div!</div>
+
+</ng-template>
+
+
+<button (click)="toggleProo()"> Toggle </button>
+<!-- Oculta a div -->
+
+<ng-container *ngIf="minhaProp; then meuTemplateNovo; else meuOutroTemplate"></ng-container>
+
+
+<ng-template #meuTemplateNovo>
+
+  <div style="background-color: rgb(255, 141, 47);" > Sou a div then!</div>
+
+</ng-template>
+
+<ng-template #meuOutroTemplate>
+
+  <div style="background-color: rgb(54, 255, 47);" > Sou a div else!</div>
+
+</ng-template>
+
+<div id="minha-div" style="display: none"> Sou uma div escondida!</div>
+
+<div id="minha-div" style="visibility : hidden"> Sou uma div escondida!</div>
+
+<!-- Fica presente no layout, mesmo que oculta -->
