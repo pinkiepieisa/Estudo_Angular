@@ -17,6 +17,5 @@ export class Button {
     this.buttonClickedEmitt.emit();
   }
 
-  @Input({ alias: 'disabled' })
-  isDisabled: boolean = false;
+  @Input({ alias: 'disabled' }) isDisabled: boolean = false;
 }
