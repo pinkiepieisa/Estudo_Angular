@@ -3,12 +3,14 @@
     <app-card 
     [planType]="'Simples'"
     [cardStyle]="'orange'"
-    [planPrice]="100"> </app-card>
+    [planPrice]="100"
+    (buttonClicked)="onCardButtonClicked()"> </app-card>
 
     <app-card
     [planType]="'Completo'"
     [cardStyle]="'purple'"
-    [planPrice]="200"> </app-card>
+    [planPrice]="200"
+    (buttonClicked)="onCardButtonClicked()"> </app-card>
 
 </div>
 

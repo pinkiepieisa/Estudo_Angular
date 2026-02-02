@@ -10,4 +10,9 @@ export class App {
   buttonClicked() {
     console.log('Button Clicked!')
   }
+
+  onCardButtonClicked() {
+    console.log('onButtonClicked')
+    //SUposta chamada HTTP
+  }
 }

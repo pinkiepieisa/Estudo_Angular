@@ -18,4 +18,6 @@ export class Button {
   }
 
   @Input({ alias: 'disabled' }) isDisabled: boolean = false;
+
+  
 }
