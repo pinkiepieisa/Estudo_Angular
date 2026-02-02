@@ -1,10 +1,18 @@
 <h1>Nome: </h1>
-<input 
-type="text" [ngModel]="name" 
-(ngModelChange)="handleInputChange($event)"
-/>
+<input type="text" [(ngModel)]="name" />
+
+<h1>Sobrenome: </h1>
+<input type="text" [(ngModel)]="lastName" (ngModelChange)="handleInputChange($event)" />
+<!-- Uso não muito comum 👆🏻 -->
+
+<!-- TwoWayDataBinding -->
 
 <!-- sinal de input [] -->
 <!-- sinal de output () -->
 
 <h1>Nome digitado: {{ name }}</h1>
+<h1>Sobrenome digitado: {{ lastName }}</h1>
+
+
+<!-- [ngModel]="name" 
+(ngModelChange)="handleInputChange($event)" -->
