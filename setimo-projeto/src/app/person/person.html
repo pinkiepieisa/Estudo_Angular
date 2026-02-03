@@ -1,0 +1,15 @@
+<div class="item" 
+  [class.item--odd]="isOdd"
+  [class.item--even]="isEven"
+  [class.item--highlighted]="isSelected"
+  (click)="selectPerson()"
+  >
+    <!-- odd é ímpar em inglês -->
+    <!-- even é par em inglês -->
+
+    <p class="item__name"> {{ personIndex }} - {{ personName }}</p>
+    <p class="item__age"> {{ personAge }} anos </p>  
+    <p *ngIf="isFirst"> É o primeiro! </p>
+    <p *ngIf="isLast"> É o último! </p>
+
+  </div>

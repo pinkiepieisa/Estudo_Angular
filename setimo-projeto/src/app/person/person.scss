@@ -1,0 +1,29 @@
+.item {
+    padding: 15px;
+    background-color: beige;
+    cursor: pointer;
+
+    &__name {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    &__age {
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    &--odd {
+        background-color: rgb(129, 129, 129);
+    }
+
+    &--even {
+        background-color: rgb(142, 223, 255);
+    }
+
+    &--highlighted {
+        color: aliceblue;
+        background-color: chartreuse;
+        border: 3px solid rgb(207, 253, 137)
+    }
+}
