@@ -4,3 +4,22 @@
 }"> Sou um H1! </h1>
 
 <!-- Lembrar de colocar a vírgula após cada elemento CSS no ngStyle -->
+
+<br /> <br />
+
+<h1 [style.font-size.px]="fontSize"
+[style.color]="textColor"> Sou outro H1! </h1>
+
+<br /> <br />
+
+<h1 [style]="stylesString"> Sou outra H1 também! </h1>
+
+<br /> <br />
+
+<h1 [ngStyle]="stylesObj"> Sou uma outra H1 também! </h1>
+
+<button (click)="increaseFontSize()"> + A </button>
+<br /> <br />
+<button (click)="decreaseFontSize()"> - D </button>
+<br /> <br />
+<button (click)="toggleFontColor()"> {{ buttonText }} </button>
