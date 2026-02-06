@@ -50,4 +50,17 @@ export class App {
     'color': this.textColor,
     }
   }
+
+  // NgClass
+
+  isGreen: boolean = true;
+
+  setToGreen() {
+    this.isGreen = true;
+  }
+
+  setToOrange() {
+    this.isGreen = false;
+  }
+
 }

@@ -23,3 +23,21 @@
 <button (click)="decreaseFontSize()"> - D </button>
 <br /> <br />
 <button (click)="toggleFontColor()"> {{ buttonText }} </button>
+
+<!-- NgClass -->
+<br /> <br />
+<br /> <br />
+
+
+<h1 [ngClass]="{
+  'is-big is-green': isGreen,
+  'is-orange': !isGreen,
+}"> Sou um H1 diferente </h1>
+<!-- É um objeto -->
+<!-- Classes separadas por espaço -->
+<!-- [  ] são aceitos desde que os objetos sejam separados por vírgula e estejam em 'string' -->
+
+<br /> <br />
+<button (click)="setToGreen()"> Verde </button>
+<br /> <br />
+<button (click)="setToOrange()"> Laranja </button>
