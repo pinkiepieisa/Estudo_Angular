@@ -19,4 +19,7 @@ export class AppComponent {
 
   teste = 'Felipe';
 
+  clicou(input: HTMLInputElement) {
+    console.log(input.value)
+  }
 }

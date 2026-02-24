@@ -1,9 +1,24 @@
 <input type="text" #meuInput />
+<br>
 
 Valor: {{ meuInput.value }}
+<br>
 
 <button (click)="changeDetection()">Atualizar</button>
-
+<br><br>
+<!--  -->
 <input type="text" #meuNovoInput [(ngModel)]="teste" />
+<br>
 
 Valor: {{ teste }}
+<br><br>
+<!--  -->
+<input type="text" #meuOutroInput ngModel />
+<br>
+
+Valor: {{ meuOutroInput.value }}
+<br>
+
+<button (click)="clicou(meuOutroInput)"> Atualizar input </button>
+
+<!--  -->
