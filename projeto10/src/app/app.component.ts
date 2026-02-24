@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FilhoComponent } from './filho/filho.component';
 
 @Component({
@@ -6,13 +6,13 @@ import { FilhoComponent } from './filho/filho.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
 
   //INJEÇÃO DE DEPENDÊNCIA
 
   constructor(
     private _cdRef: ChangeDetectorRef
-  ) {}
+  ) { }
 
   changeDetection() {
     this._cdRef.detectChanges();
@@ -27,9 +27,9 @@ export class AppComponent {
   // 
 
   @ViewChild('maisUmInput')
-    meuInputEl!: ElementRef<HTMLInputElement>;
+  meuInputEl!: ElementRef<HTMLInputElement>;
 
-  updateInputText(){
+  updateInputText() {
     this.meuInputEl.nativeElement.value = 'Texto atualizado!';
   }
 
@@ -38,18 +38,34 @@ export class AppComponent {
   }
 
   @ViewChild('minhaDiv')
-    minhaDiv!: ElementRef<HTMLDivElement>;
+  minhaDiv!: ElementRef<HTMLDivElement>;
 
-  changeText(){
+  changeText() {
     this.minhaDiv.nativeElement.textContent = 'Funcionou!';
   }
 
   @ViewChild('meuCompFilho')
-    filhoCompRef!: FilhoComponent;
-    // Tipagem do componente segue o nome do component
+  filhoCompRef!: FilhoComponent;
+  // Tipagem do componente segue o nome do component
 
   hello() {
     this.filhoCompRef.dizerOi();
     this.filhoCompRef.message = 'Eu disse "Oie!"';
+  }
+
+  // 
+
+  @ViewChild('meuInputFoco')
+  inputFocus!: ElementRef<HTMLInputElement>;
+
+  ngOnInit() {
+    console.log('ngOnInit', this.inputFocus);
+  }
+
+  ngAfterViewInit(){
+    console.log('ngAfterViewInit', this.inputFocus);
+
+    this.inputFocus.nativeElement.focus();
+
   }
 }
