@@ -20,5 +20,24 @@ Valor: {{ meuOutroInput.value }}
 <br>
 
 <button (click)="clicou(meuOutroInput)"> Atualizar input </button>
+<br> <br>
 
 <!--  -->
+Meu input: <input type="text" #maisUmInput /> 
+<!-- # template variable -->
+<br>
+
+<button (click)="updateInputText()"> Atualizar o input </button>
+<br> <br>
+
+<button (click)="focus()"> Foco </button>
+
+<br> <br>
+
+<div #minhaDiv >
+  Conteúdo inicial!
+</div>
+
+<br>
+
+<button (click)="changeText()"> Mudar conteúdo </button>

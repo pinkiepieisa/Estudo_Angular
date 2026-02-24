@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -22,4 +22,25 @@ export class AppComponent {
   clicou(input: HTMLInputElement) {
     console.log(input.value)
   }
+
+  // 
+
+  @ViewChild('maisUmInput')
+    meuInputEl!: ElementRef<HTMLInputElement>;
+
+  updateInputText(){
+    this.meuInputEl.nativeElement.value = 'Texto atualizado!';
+  }
+
+  focus() {
+    this.meuInputEl.nativeElement.focus();
+  }
+
+  @ViewChild('minhaDiv')
+    minhaDiv!: ElementRef<HTMLDivElement>;
+
+  changeText(){
+    this.minhaDiv.nativeElement.textContent = 'Funcionou!';
+  }
+
 }
