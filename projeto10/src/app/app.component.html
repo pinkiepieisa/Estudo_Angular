@@ -50,3 +50,13 @@ Meu input: <input type="text" #maisUmInput />
 <button (click)="hello()"> Dizer olá </button>
 <br> <br> <br>
 <input type="text" #meuInputFoco>
+
+<br> <br> <br>
+<!--  -->
+
+<button 
+#meuButton
+*ngFor="let btn of buttonList"
+(click)="changeColor($event)"> {{ btn }} </button>
+<br>
+<button (click)="resetButton()"> resetar </button>

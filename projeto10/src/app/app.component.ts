@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { FilhoComponent } from './filho/filho.component';
 
 @Component({
@@ -6,7 +6,8 @@ import { FilhoComponent } from './filho/filho.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, AfterViewInit {
+
+export class AppComponent implements AfterViewInit {
 
   //INJEÇÃO DE DEPENDÊNCIA
 
@@ -53,19 +54,69 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.filhoCompRef.message = 'Eu disse "Oie!"';
   }
 
+  
+
+  // @ViewChild('meuInputFoco')
+  // inputFocus!: ElementRef<HTMLInputElement>;
+
+  // ngOnInit() {
+  //   console.log('ngOnInit', this.inputFocus);
+  // }
+
+  // ngAfterViewInit(){
+  //   console.log('ngAfterViewInit', this.inputFocus);
+
+  //   this.inputFocus.nativeElement.focus();
+
+  // }
+
   // 
 
-  @ViewChild('meuInputFoco')
-  inputFocus!: ElementRef<HTMLInputElement>;
+  buttonList = [
+    'Botão 1',
+    'Botão 2',
+    'Botão 3'
+  ];
 
-  ngOnInit() {
-    console.log('ngOnInit', this.inputFocus);
+  @ViewChildren('meuButton')
+  buttonsEl!: QueryList<ElementRef<HTMLButtonElement>>;
+  //ElementRef é uma tipagem genérica
+
+  ngAfterViewInit() {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
+
+    console.log(this.buttonsEl);
+
+    console.log(this.buttonsEl.toArray());
+
+    const primeiro = this.buttonsEl.toArray()[0];
+    //Acessa o primeiro item da lista 
+
+    primeiro.nativeElement.style.backgroundColor = 'purple';
+    
   }
 
-  ngAfterViewInit(){
-    console.log('ngAfterViewInit', this.inputFocus);
+  changeColor(event: Event) {
+    console.log(event);
 
-    this.inputFocus.nativeElement.focus();
+    const btnElement = event.target as HTMLButtonElement;
 
+    //Tipagem especifica para os métodos e propriedades do tipo button
+
+    btnElement.style.backgroundColor = 'pink';
+    btnElement.style.color = 'white';
   }
+
+  resetButton() {
+    this.buttonsEl.forEach((btnEl) => {
+      console.log(btnEl);
+
+      btnEl.nativeElement.style.backgroundColor = '';
+      btnEl.nativeElement.style.color = 'black';
+
+    });
+  }
+
+
 }
