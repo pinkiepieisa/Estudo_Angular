@@ -94,6 +94,10 @@ export class AppComponent implements AfterViewInit {
     //Acessa o primeiro item da lista 
 
     primeiro.nativeElement.style.backgroundColor = 'purple';
+
+    this.buttonsEl.changes.subscribe((result) => {
+      console.log(result);
+    })
     
   }
 
@@ -118,5 +122,19 @@ export class AppComponent implements AfterViewInit {
     });
   }
 
+  first() {
+
+    const primeiro = this.buttonsEl.get(0);
+    const primeiroEl = 
+      this.buttonsEl.find((btnEl) => btnEl.nativeElement.className === 'btn-0');
+
+    console.log(primeiro);
+    console.log(primeiroEl);
+
+  }
+
+  remove() {
+    this.buttonList.shift();
+  }
 
 }

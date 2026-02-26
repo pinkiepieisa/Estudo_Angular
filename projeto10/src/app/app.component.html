@@ -56,7 +56,12 @@ Meu input: <input type="text" #maisUmInput />
 
 <button 
 #meuButton
-*ngFor="let btn of buttonList"
+class="btn-{{ i }}"
+*ngFor="let btn of buttonList; let i = index"
 (click)="changeColor($event)"> {{ btn }} </button>
 <br>
 <button (click)="resetButton()"> resetar </button>
+<br>
+<button (click)="first()"> Primeiro elemento </button>
+<br>
+<button (click)="remove()"> Remover </button>
