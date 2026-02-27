@@ -1,0 +1,19 @@
+<p (mouseover)="changeBackgroud($event)" (mouseleave)="returnBackgroud($event)">sem-diretiva works!</p>
+
+<br> 
+
+<!-- Outra forma de fazer -->
+
+<p
+    [ngStyle]="{
+        'background-color': addBgColor ? 'purple' : 'white',
+    }"
+
+    (mouseover)="onMouseOver()"
+    (mouseout)="onMouseOut()"
+>
+ Ainda sem diretiva!
+</p>
+
+<!-- Ternário:
+ 'background-color': addBgColor ? 'purple' : 'white', -->
