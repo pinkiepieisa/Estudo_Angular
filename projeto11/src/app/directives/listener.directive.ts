@@ -17,7 +17,7 @@ export class ListenerDirective {
 
       const fullText = (event.target as HTMLInputElement).value;
 
-      console.log(parms2);
+      console.log(fullText);
       
     }
 
