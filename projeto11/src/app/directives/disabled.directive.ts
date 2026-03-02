@@ -5,5 +5,5 @@ import { Directive, HostBinding } from '@angular/core';
 })
 export class DisabledDirective {
 
-  @HostBinding('disabled') propDisabled = false;
+  // @HostBinding('disabled') propDisabled = false;
 }

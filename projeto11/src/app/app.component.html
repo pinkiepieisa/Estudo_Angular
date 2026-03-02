@@ -23,3 +23,21 @@
 <!-- Propertie binding -->
 
 <button appDisabled>Botão 4</button>
+<br> <br>
+<!--  -->
+
+<p style="background-color: coral; color: rgb(1, 145, 44);">Parágrafo normal</p>
+
+<p [attr.style]="'background-color: gray; color: blue'">Parágrafo com atributos</p>
+
+<p [style]="'background-color: pink; color: white'">Parágrafo com propriedades</p>
+<!-- Uso mais recomendado -->
+
+<p [style]="{
+    backgroundColor: 'yellow',
+    color: 'gray'
+}">Parágrafo com objeto</p>
+
+<p appStyle> Parágrafo com diretiva</p>
+
+
