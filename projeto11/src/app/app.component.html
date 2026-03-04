@@ -40,4 +40,60 @@
 
 <p appStyle> Parágrafo com diretiva</p>
 
+<!--  -->
+
+<p class="meu-texto"> Normal</p>
+
+<p [className]="'meu-texto meu-tamanho'"> className</p>
+
+<p [attr.class]="'meu-texto'"> attr.class </p>
+
+<p [class]="'meu-texto meu-tamanho'"> class -> criado pelo angular, parecido com o style \</p>
+
+<p [class]= "{
+'meu-texto': true, 
+'meu-tamanho': true}"
+> class -> como objeto </p>
+
+<!-- Separado por traço meu-texto, deve estar em '' como uma string, caso seja meuTexto não precisa -->
+
+<p appClass > Minha nova diretiva </p>
+
+<!--  -->
+<!-- Hosting listener escuta o que estiver no elemento html que for citado, usado para eventos -->
+
+<input appListener />
+
+<!--  -->
+<!-- Como passar valores do componente para as diretivas -->
+
+<!-- <br><br> -->
+
+<!-- <input 
+appInputBackground = "blue"
+textColor = 'white'
+/> -->
+
+<!-- <br> <br> -->
+<!-- 
+<input 
+appInputBackground 
+bgColor= "blue"
+tColor = 'white'
+/>
+
+<br> <br>
+
+<input 
+appInputBackground 
+[bgColor]= "appBgColor"
+tColor = 'white'
+/> -->
+
+<br> <br>
+
+<input 
+[appInputBackground] = "appBgColor"
+tColor = 'white'
+/>
 
