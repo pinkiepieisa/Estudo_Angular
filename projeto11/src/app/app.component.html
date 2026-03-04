@@ -67,10 +67,33 @@
 <!--  -->
 <!-- Como passar valores do componente para as diretivas -->
 
-<br>
+<!-- <br><br> -->
 
-<input 
+<!-- <input 
 appInputBackground = "blue"
 textColor = 'white'
+/> -->
+
+<!-- <br> <br> -->
+<!-- 
+<input 
+appInputBackground 
+bgColor= "blue"
+tColor = 'white'
+/>
+
+<br> <br>
+
+<input 
+appInputBackground 
+[bgColor]= "appBgColor"
+tColor = 'white'
+/> -->
+
+<br> <br>
+
+<input 
+[appInputBackground] = "appBgColor"
+tColor = 'white'
 />
 
