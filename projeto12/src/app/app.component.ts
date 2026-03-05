@@ -38,6 +38,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.divEl.nativeElement.classList.add('minha-classe');
   }
 
+  // 
+
   createElement() {
     const novaDiv = document.createElement('div');
     //Utiliza o DOM
@@ -50,4 +52,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     this._elRef.nativeElement.appendChild(novaDiv);
     //Injeta no HTML, appendChild gera o novo elemento
   }
+
+  // 
+
+  
 }
