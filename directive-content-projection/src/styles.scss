@@ -20,4 +20,16 @@ body {
 .ca-u-card-text-description {
     font-weight: 300;
     font-size: 20px;
+    display: block;
+}
+
+.ca-u-card-avatar-small img {
+    border-radius:  50%;
+    width: 100px;
+    height: 100px;
+}
+.ca-u-card-avatar-large img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
 }
