@@ -1,0 +1,13 @@
+Ex: 1
+<br>
+<ng-container *ngTemplateOutlet="meuTemplate">
+
+</ng-container>
+
+
+<ng-template #meuTemplate>
+    Template:
+    <app-meu-novo-comp></app-meu-novo-comp>
+</ng-template>
+
+<!-- O ng template precisa ser referenciado em um ng-container para ter seu conteúdo expostpo, por meio de um ngTemplateOutlet -->
