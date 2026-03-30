@@ -22,4 +22,6 @@ export class CardComponent implements OnInit, AfterContentInit {
     console.log('AfterContentInit', this.content);
   }
 
+  condition: boolean = true;
+
 }
