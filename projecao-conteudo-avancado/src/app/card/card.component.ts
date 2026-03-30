@@ -1,15 +1,25 @@
-import { Component, Input, TemplateRef } from '@angular/core';
+import { AfterContentInit, Component, ContentChild, Input, OnInit, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
-export class CardComponent {
-@Input({ required: true }) header!: TemplateRef<any>;
+export class CardComponent implements OnInit, AfterContentInit {
+// @Input({ required: true }) header!: TemplateRef<any>;
 
-@Input({ required: true }) content!: TemplateRef<any>;
+// @Input({ required: true }) content!: TemplateRef<any>;
 
-@Input({ required: true }) footer!: TemplateRef<any>;
+// @Input({ required: true }) footer!: TemplateRef<any>;
+
+  @ContentChild('meuTemplate') content!: TemplateRef<any>;
+
+  ngOnInit(): void {
+    console.log('OnInit', this.content);
+  }
+
+  ngAfterContentInit(): void {
+    console.log('AfterContentInit', this.content);
+  }
 
 }

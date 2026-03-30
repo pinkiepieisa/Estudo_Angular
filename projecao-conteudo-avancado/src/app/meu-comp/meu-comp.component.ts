@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeuCompComponent implements OnInit {
 
-  ngOnInit() {
+  ngOnInit(): void {
     console.log('MeuCompComponent OnInit');
   }
 }

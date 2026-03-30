@@ -18,7 +18,7 @@
  <!-- Lógica não é disparada, não sobrecarregando o processamento -->
 
 
- <ng-template #headerTemplate>
+ <!-- <ng-template #headerTemplate>
   <p>Sou o Header</p>
  </ng-template>
 
@@ -35,4 +35,12 @@
  [header]="headerTemplate"
  [content]="contentTemplate"
  [footer]="footerTemplate"
- ></app-card>
+ ></app-card> -->
+
+ <!--  -->
+
+<app-card>
+  <ng-template #meuTemplate>
+    <app-meu-comp></app-meu-comp>
+  </ng-template>
+</app-card>
