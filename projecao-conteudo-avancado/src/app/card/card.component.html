@@ -1,0 +1,45 @@
+<!-- <ng-container *ngTemplateOutlet="header"></ng-container>
+
+<ng-container *ngTemplateOutlet="content"></ng-container>
+
+<ng-container *ngTemplateOutlet="footer ? footer : defaultFooterTemplate"></ng-container>
+
+<ng-template #defaultFooterTemplate>
+    Sou o Footer Default
+</ng-template> -->
+
+<!--  -->
+
+<div class="card">
+    <!-- <ng-content></ng-content> -->
+    <!-- <ng-container *ngTemplateOutlet="content"></ng-container> -->
+
+    <!-- Ex 1 -->
+
+    <!-- <ng-container *ngIf="condition; else elseTemplate">
+        <ng-container *ngTemplateOutlet="content">
+        </ng-container>
+    </ng-container>
+
+    <ng-template #elseTemplate>
+        Sou o Else Template
+    </ng-template> -->
+
+    <!-- Ex 2 -->
+
+    <!-- <ng-container *ngIf="condition; else elseTemplate" [ngTemplateOutlet]="content">
+
+    </ng-container>
+
+
+    <ng-template #elseTemplate>
+        Sou o Else Template
+    </ng-template> -->
+
+    <!-- Ex 3 -->
+
+    <ng-container *ngTemplateOutlet="condition ? content : null"></ng-container>
+
+
+</div>
+<!-- Card que quero projetar -->

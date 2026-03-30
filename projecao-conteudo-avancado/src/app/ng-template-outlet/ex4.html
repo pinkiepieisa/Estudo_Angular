@@ -1,0 +1,18 @@
+Ex 4:
+
+<br>
+
+<ng-container *ngTemplateOutlet="condition ? meuTemplate : elseTemplate">
+<!-- condition ? -> retorna meuTemplate : -> do contrário retorna elseTemplate / se chama ternário -->
+
+</ng-container>
+
+
+<ng-template #meuTemplate>
+    Template:
+    <app-meu-novo-comp></app-meu-novo-comp>
+</ng-template>
+
+<ng-template #elseTemplate>
+    Sou o Else Template
+</ng-template>
