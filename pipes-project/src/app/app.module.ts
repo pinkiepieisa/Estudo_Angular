@@ -3,16 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { StatusPipe } from './pipe/status.pipe';
-import { TruncatePipe } from './pipe/truncate.pipe';
+import { ObsComObjetoComponent } from './components/obs-com-objeto/obs-com-objeto.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     StatusPipe,
-    TruncatePipe
+    ObsComObjetoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
