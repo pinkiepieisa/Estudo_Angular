@@ -26,4 +26,8 @@ export class ObsComObjetoComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.userSubs && this.userSubs.unsubscribe();
   }
+
+  onBtnClick(userId: number) {
+    this.user$ = this._usersService.getUserById(userId);
+  }
 }
