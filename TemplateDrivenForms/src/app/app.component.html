@@ -5,7 +5,6 @@
 <br /> <br />
 
 <input [ngModel]="nome" (ngModelChange)="onChange($event)" />
-
 <br /> <br />
 
 <!-- [] -> input () -> output -->
@@ -15,7 +14,20 @@
 <!-- <input [()] /> banana in the box -->
 
 <input [(ngModel)]="nome" />
+<br /> <br />
 
-<br />
+<button (click)="show()"> Mostrar </button>
+<br /> <br />
 
-<button (click)="show()"> Mostrar 
+<input 
+    ngModel
+    #meuInputFormControl="ngModel"
+    minlength="5"
+    required="true"
+/> 
+<!-- Dessa forma é possível usar métodos do Angular e permite saber o estado do input -->
+<br /> <br />
+
+<p> Válido: {{ meuInputFormControl.valid }} </p>
+<p> Tocado: {{ meuInputFormControl.touched }} </p>
+<p> Sujo: {{ meuInputFormControl.dirty }} </p>
