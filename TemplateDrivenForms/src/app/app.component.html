@@ -1,1 +1,21 @@
 <input [ngModel]="'Teste'" />
+<br /> <br />
+
+<input [ngModel]="nome" />
+<br /> <br />
+
+<input [ngModel]="nome" (ngModelChange)="onChange($event)" />
+
+<br /> <br />
+
+<!-- [] -> input () -> output -->
+
+<!-- Two way databiding -->
+
+<!-- <input [()] /> banana in the box -->
+
+<input [(ngModel)]="nome" />
+
+<br />
+
+<button (click)="show()"> Mostrar 
