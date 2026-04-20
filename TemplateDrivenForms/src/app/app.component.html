@@ -24,9 +24,14 @@ Nome:
     ngModel
     #meuInput
     #meuInputFormControl="ngModel"
+    [ngClass]="{
+        'valid': meuInputFormControl.valid && meuInputFormControl.touched,
+        'invalid': meuInputFormControl.invalid && meuInputFormControl.touched
+    }" 
     minlength="5"
     required="true"
-/> 
+/>  
+<!-- Aplicação de cor com lógica no ngModel -->
 <!-- Dessa forma é possível usar métodos do Angular e permite saber o estado do input -->
 
 <div *ngIf="meuInputFormControl.invalid && meuInputFormControl.touched" >
