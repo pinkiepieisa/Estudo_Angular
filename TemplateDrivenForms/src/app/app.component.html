@@ -19,6 +19,7 @@
 <button (click)="show()"> Mostrar </button>
 <br /> <br />
 
+Nome:
 <input 
     ngModel
     #meuInput
@@ -27,6 +28,17 @@
     required="true"
 /> 
 <!-- Dessa forma é possível usar métodos do Angular e permite saber o estado do input -->
+
+<div *ngIf="meuInputFormControl.invalid && meuInputFormControl.touched" >
+    <div *ngIf="meuInputFormControl.hasError('required')">
+        O campo nome é obrigatório!
+    </div>
+
+    <div *ngIf="meuInputFormControl.hasError('minlength')">
+        Obrigatório conter mais de 5 letras!
+    </div>
+</div>
+
 <br /> <br />
 
 <p> Válido: {{ meuInputFormControl.valid }} </p>
