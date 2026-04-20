@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   nome: string = 'Bela';
 
   onChange(text: string) {
@@ -22,4 +23,17 @@ export class AppComponent {
   }
 
   // Form control
+
+  @ViewChild('meuInputFormControl') inputEl!: NgModel;
+
+  ngAfterViewInit() {
+    console.log(this.inputEl);
+  }
+
+  send() {
+    if(this.inputEl.valid && this.inputEl.touched) {
+      console.log('Enviado!');
+    }
+  }
+
 }
