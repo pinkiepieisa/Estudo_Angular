@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { NgModel } from '@angular/forms';
 
 @Component({
@@ -25,9 +25,14 @@ export class AppComponent implements AfterViewInit {
   // Form control
 
   @ViewChild('meuInputFormControl') inputEl!: NgModel;
+  // Estado do input
+  @ViewChild('meuInput') anotherInputEl!: ElementRef<HTMLInputElement>;
+  // Propriedades do input
 
   ngAfterViewInit() {
-    console.log(this.inputEl);
+    console.log('Form Control =>', this.inputEl);
+    console.log('Original =>', this.anotherInputEl);
+
   }
 
   send() {
