@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { TextareaComponent } from './elements/textarea/textarea/textarea.component';
 import { SelectComponent } from './elements/select/select.component';
+import { RadioButtonComponent } from './elements/radio-button/radio-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TextareaComponent,
-    SelectComponent
+    SelectComponent,
+    RadioButtonComponent
   ],
   imports: [
     BrowserModule,
