@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-radio-button',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './radio-button.component.scss'
 })
 export class RadioButtonComponent {
+  onSubmit(meuForm: NgForm) {
+    console.log(meuForm.value);
+  }
 
 }
