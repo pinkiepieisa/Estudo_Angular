@@ -1,0 +1,35 @@
+<form #meuForm="ngForm" (ngSubmit)="onSubmit(meuForm)" [ngFormOptions]="{ updateOn: 'submit' }">
+    <input name="nome" type="text" [(ngModel)]="inputText" />
+    <br /> <br />
+
+    <textarea name="descricao" [(ngModel)]="textarea"></textarea>
+
+    <br /> <br/>
+
+    <select name="pais" [(ngModel)]="select">
+        <option value="1"> Brasil </option>
+        <option value="2"> Espanha </option>
+    </select>
+
+    <br /> <br/>
+
+    <input type="radio" name="groupStatus" id="ativo" value="1" [(ngModel)]="radioButton" />
+    <label for="ativo"> Ativo </label>
+
+    <input type="radio" name="groupStatus" id="inativo" value="2" [(ngModel)]="radioButton" />
+    <label for="inativo"> Inativo </label>
+
+    <br /> <br />
+
+    <input type="checkbox" id="condicao" name="condicao" [(ngModel)]="checkbox" />
+    <label for="condicao"> Declaração de Termos </label>
+    
+    <br /> <br />
+
+    <button> Enviar </button>
+
+    <br /> <br />
+    
+    <button type="reset" (click)="onReset(meuForm)"> Limpar </button>
+
+</form>
