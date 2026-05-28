@@ -2,9 +2,9 @@
 <input type="text" id="name" [formControl]="nome" />
 
 <div>
-    <span style="color: orange;"> Validando... </span>
-    <span style="color: greenyellow;"> Usuário existente! </span>
-    <span style="color: red;"> Usuário inexistente. </span>
+    <span style="color: orange;" *ngIf="nome.pending"> Validando... </span>
+    <span style="color: greenyellow;" *ngIf="!nome.pending && !nome.hasError('userValidator') && nome.valid && nome.dirty"> Usuário existente! </span>
+    <span style="color: red;" *ngIf="!nome.pending && nome.hasError('userValidator') && !nome.valid && nome.dirty"> Usuário inexistente. </span>
 </div>
 
 <p> Válido: {{ nome.valid }} </p>

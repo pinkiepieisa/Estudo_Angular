@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { UserValidatorService } from './user-validator.service';
 
 @Component({
   selector: 'app-validator-assincrono',
@@ -7,5 +8,14 @@ import { FormControl } from '@angular/forms';
   styleUrl: './validator-assincrono.component.scss'
 })
 export class ValidatorAssincronoComponent {
-  nome = new FormControl('');
+  nome = new FormControl('', {
+    asyncValidators: [this._userValidatorService.validate.bind(this._userValidatorService)],
+    updateOn: 'blur',
+    // Atualiza quando clica fora
+  });
+  // Configuração obrigatória
+
+  constructor(
+    private readonly _userValidatorService: UserValidatorService
+  ) {}
 }
