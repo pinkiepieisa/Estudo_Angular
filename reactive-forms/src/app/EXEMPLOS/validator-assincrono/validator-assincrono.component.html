@@ -1,0 +1,10 @@
+<label for="name"> Nome: </label>
+<input type="text" id="name" [formControl]="nome" />
+
+<div>
+    <span style="color: orange;"> Validando... </span>
+    <span style="color: greenyellow;"> Usuário existente! </span>
+    <span style="color: red;"> Usuário inexistente. </span>
+</div>
+
+<p> Válido: {{ nome.valid }} </p>
