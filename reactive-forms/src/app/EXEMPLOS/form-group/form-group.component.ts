@@ -16,6 +16,11 @@ export class FormGroupComponent {
     console.log(this.pessoaForm);
   }
 
+  get nome(): FormControl {
+    return this.pessoaForm.get('nome') as FormControl;
+  }
+  //  Quando invoca com o get ele não vira um método, vira uma propriedade do elemento
+
   mostrarValue() {
     console.log(this.pessoaForm.value);
   }

@@ -1,6 +1,8 @@
 <form [formGroup]="pessoaForm">
     <label for="name"> Nome: </label>
     <input type="text" id="name" formControlName="nome"/>
+    <!-- <p *ngIf="pessoaForm.get('nome')?.hasError('required')">O nome é obrigatório!</p> -->
+    <p *ngIf="nome.hasError('required')">O nome é obrigatório!</p>
 
     <br />
 
