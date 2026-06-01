@@ -7,6 +7,7 @@
             <label [for]="'musica - ' + i">Música:</label>
             <input type="text" [id]="'musica - '+ i" [formControlName]="i" />
             <!-- Ligando o input ao array -->
+            <button (click)="removerMusica(i)"> - Remover </button>
         </div>
     </div>
 

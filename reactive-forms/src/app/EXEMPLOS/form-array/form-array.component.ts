@@ -18,7 +18,13 @@ export class FormArrayComponent {
   }
 
   adicionarMusica() {
-    throw new Error('Method not implemented.');
+    this.musicas.push(new FormControl('Novo', [Validators.required]));
+    // Método push vindo do formArray
+  }
+
+  removerMusica(musicaIndex: number) {
+    this.musicas.removeAt(musicaIndex);
+    // Método removeAt vindo do formArray
   }
 
   get musicas(): FormArray {
