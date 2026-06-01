@@ -1,1 +1,15 @@
-<p>form-array works!</p>
+<form [formGroup]="musicasForm">
+    <button (click)="adicionarMusica()"> + Adicionar </button>
+
+    <div formArrayName="musicas">
+        <div *ngFor="let musica of musicas.controls; let i = index;">
+            <!-- Vai acessar os controls presente no elemento dono do alias -->
+            <label [for]="'musica - ' + i">Música:</label>
+            <input type="text" [id]="'musica - '+ i" [formControlName]="i" />
+            <!-- Ligando o input ao array -->
+        </div>
+    </div>
+
+    <p>Form Musicas válido: {{ musicasForm.valid }} </p>
+    <p>Form Array válido: {{ musicas.valid }} </p>
+</form>

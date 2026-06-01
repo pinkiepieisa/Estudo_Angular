@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-array',
@@ -6,5 +7,21 @@ import { Component } from '@angular/core';
   styleUrl: './form-array.component.scss'
 })
 export class FormArrayComponent {
+  musicasForm = new FormGroup({
+    musicas: new FormArray([
+      new FormControl('', [Validators.required])
+    ]),
+  });
 
+  constructor() {
+    console.log(this.musicasForm);
+  }
+
+  adicionarMusica() {
+    throw new Error('Method not implemented.');
+  }
+
+  get musicas(): FormArray {
+    return this.musicasForm.get('musicas') as FormArray;
+  }
 }
