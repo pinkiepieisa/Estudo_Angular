@@ -8,6 +8,8 @@ import { ValidatorAssincronoComponent } from './EXEMPLOS/validator-assincrono/va
 import { HttpClientModule } from '@angular/common/http';
 import { FormGroupComponent } from './EXEMPLOS/form-group/form-group.component';
 import { FormArrayComponent } from './EXEMPLOS/form-array/form-array.component';
+import { FormBuildExternoComponent } from './EXEMPLOS/form-build-externo/form-build-externo.component';
+import { FormBuilderExternoComServiceComponent } from './EXEMPLOS/form-builder-externo-com-service/form-builder-externo-com-service.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { FormArrayComponent } from './EXEMPLOS/form-array/form-array.component';
     FormControlComponent,
     ValidatorAssincronoComponent,
     FormGroupComponent,
-    FormArrayComponent
+    FormArrayComponent,
+    FormBuildExternoComponent,
+    FormBuilderExternoComServiceComponent
   ],
   imports: [
     BrowserModule,
