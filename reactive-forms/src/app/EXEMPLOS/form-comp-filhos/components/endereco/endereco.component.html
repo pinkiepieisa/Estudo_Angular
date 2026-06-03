@@ -1,0 +1,11 @@
+<div [formGroup]="pessoaForm">
+    <div formGroupName="endereco"> <!-- Pode ser um ng-container também, não necessariamente uma div -->
+        <label>Rua:</label>
+        <input type="text" formControlName="rua" />
+
+        <br />
+
+        <label>Número:</label>
+        <input type="text" formControlName="numero" />
+    </div>
+</div>
